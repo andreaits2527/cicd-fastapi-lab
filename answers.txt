@@ -1,0 +1,33 @@
+## Compito 1
+
+1. Perché separare la funzione somma dall’endpoint?
+    Perché possiamo testare direttamente la logica della somma senza dover simulare ogni volta una richiesta HTTP. Inoltre il codice rimane più ordinato e riutilizzabile.
+
+
+2. Quale endpoint useremo come health check?
+    L’endpoint GET /, perché restituisce {"status": "ok"} e permette di verificare rapidamente che l’applicazione sia attiva.
+
+## Compito 2
+
+1. Come si testa FastAPI senza avviare il server?
+    Con TestClient, che simula le richieste HTTP direttamente sull’applicazione
+
+2. Quale comando esegue i test in locale?
+    pytest
+
+## Compito 3
+1. Perché utilizziamo la porta 8080?
+    Perché è la porta attesa normalmente da Google Cloud Run. L’applicazione nel container deve ascoltare su quella porta.
+
+2. In quale ordine copiamo i file?
+    Prima requirements.txt, poi installiamo le dipendenze e infine copiamo il codice. In questo modo Docker riutilizza la cache delle dipendenze quando cambia soltanto app.py.
+
+## Compito 4
+
+## Compito 5
+
+## Compito 6
+
+## Compito 7
+
+## Compito 8
