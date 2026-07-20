@@ -26,3 +26,15 @@ jobs:
 
       - name: Esecuzione test
         run: pytest -v
+
+  build:
+    name: Build immagine Docker
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - name: Checkout del repository
+        uses: actions/checkout@v7
+
+      - name: Costruzione immagine Docker
+        run: docker build -t cicd-fastapi-lab:${{ github.sha }} .
