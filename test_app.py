@@ -7,7 +7,7 @@ client = TestClient(app)
 
 
 def test_somma():
-    assert somma(5, 3) == 9
+    assert somma(5, 3) == 8
     assert somma(-2, 2) == 0
 
 
